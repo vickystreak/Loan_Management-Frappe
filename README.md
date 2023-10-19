@@ -18,3 +18,8 @@
 ### Payment Receipt: Captures payment receipt details, providing proof of payment,Offers printable receipts with loan status updates,Maintains a transaction history for reference.
 ![Screenshot from 2023-10-19 15-55-23](https://github.com/vickystreak/Loan_Management-Frappe/assets/82258418/8dac488a-e89d-43c9-b03a-d33022a205e7)
 ![Screenshot from 2023-10-19 15-55-00](https://github.com/vickystreak/Loan_Management-Frappe/assets/82258418/f4e7880c-e747-4416-8117-a8acebcce57a)
+
+### Report: The system also enables the generation of comprehensive loan reports, including borrower names, loan types, loan numbers, total loan amounts, approval dates, EMI details, and more. These reports can be easily downloaded in CSV format for efficient record-keeping and analysis.
+## Sample report:
+![Screenshot from 2023-10-19 16-37-04](https://github.com/vickystreak/Loan_Management-Frappe/assets/82258418/84f3302a-49c9-4dc2-8f3a-db5fba605f85)
+
