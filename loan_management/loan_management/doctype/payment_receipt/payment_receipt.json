@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{borrower}-{loan_number}-{Paid}-{###}",
+ "creation": "2023-10-18 11:02:21.318645",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "borrower",
+  "loan",
+  "loan_number",
+  "emi_payment_date",
+  "total_loan_amount",
+  "column_break_29i7s",
+  "emi_amount",
+  "outstanding_balance",
+  "total_no_of_emi",
+  "no_of_emi_paid"
+ ],
+ "fields": [
+  {
+   "fetch_from": "loan.borrower",
+   "fieldname": "borrower",
+   "fieldtype": "Link",
+   "label": "Borrower",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "loan",
+   "fieldtype": "Link",
+   "label": "Loan ID",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "emi_amount",
+   "fieldtype": "Currency",
+   "label": "EMI amount"
+  },
+  {
+   "fetch_from": "loan.outstanding_balance",
+   "fieldname": "outstanding_balance",
+   "fieldtype": "Currency",
+   "label": "Outstanding Balance",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "column_break_29i7s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "loan.loan_number",
+   "fieldname": "loan_number",
+   "fieldtype": "Int",
+   "label": "Loan Number",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "emi_payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date "
+  },
+  {
+   "fetch_from": "loan.total_no_of_emi",
+   "fieldname": "total_no_of_emi",
+   "fieldtype": "Int",
+   "label": "Total no of EMI",
+   "options": "Loan"
+  },
+  {
+   "fetch_from": "loan.emi_paid",
+   "fieldname": "no_of_emi_paid",
+   "fieldtype": "Int",
+   "label": "No of EMI Paid",
+   "options": "Loan"
+  },
+  {
+   "fetch_from": "loan.total_loan_amount",
+   "fieldname": "total_loan_amount",
+   "fieldtype": "Currency",
+   "label": "Total Loan Amount",
+   "options": "Loan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-18 16:50:58.551313",
+ "modified_by": "Administrator",
+ "module": "Loan Management",
+ "name": "Payment Receipt",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

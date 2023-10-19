@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{loan}-{payment_date}-{emi_amount}-{###}",
+ "creation": "2023-10-17 17:52:43.897869",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "loan",
+  "loan_number",
+  "borrower",
+  "payment_date",
+  "emi_amount",
+  "outstanding_amount",
+  "amended_from",
+  "column_break_xu1ur",
+  "payment_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "loan",
+   "fieldtype": "Link",
+   "label": "Loan ID",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "loan.monthly_emi",
+   "fieldname": "emi_amount",
+   "fieldtype": "Currency",
+   "label": "EMI amount",
+   "options": "Loan"
+  },
+  {
+   "fetch_from": "loan.outstanding_balance",
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding amount",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Paid\nOverdue"
+  },
+  {
+   "fieldname": "column_break_xu1ur",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "loan.loan_number",
+   "fieldname": "loan_number",
+   "fieldtype": "Int",
+   "label": "Loan Number",
+   "options": "Loan"
+  },
+  {
+   "fetch_from": "loan.borrower",
+   "fieldname": "borrower",
+   "fieldtype": "Data",
+   "label": "Borrower",
+   "options": "Loan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-18 16:36:40.331465",
+ "modified_by": "Administrator",
+ "module": "Loan Management",
+ "name": "Payment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{borrower}-{loan_number}",
+ "creation": "2023-10-17 12:43:16.457683",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "loan_number",
+  "borrower",
+  "principal_amount",
+  "loan_tenure",
+  "interest_rate",
+  "loan_type",
+  "date_of_loan_approved",
+  "column_break_jow9r",
+  "total_no_of_emi",
+  "emi_paid",
+  "monthly_emi",
+  "total_loan_amount",
+  "outstanding_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "borrower",
+   "fieldtype": "Data",
+   "label": "Borrower"
+  },
+  {
+   "fieldname": "principal_amount",
+   "fieldtype": "Currency",
+   "label": "Principal amount"
+  },
+  {
+   "fieldname": "interest_rate",
+   "fieldtype": "Percent",
+   "label": "Interest rate"
+  },
+  {
+   "fieldname": "loan_tenure",
+   "fieldtype": "Int",
+   "label": "Loan tenure"
+  },
+  {
+   "fieldname": "monthly_emi",
+   "fieldtype": "Currency",
+   "label": "Monthly EMI"
+  },
+  {
+   "fieldname": "outstanding_balance",
+   "fieldtype": "Currency",
+   "label": "Outstanding Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jow9r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_loan_approved",
+   "fieldtype": "Date",
+   "label": "Date of Loan Approved"
+  },
+  {
+   "fieldname": "loan_number",
+   "fieldtype": "Int",
+   "label": "Loan Number"
+  },
+  {
+   "fieldname": "emi_paid",
+   "fieldtype": "Int",
+   "label": "No of EMI Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_loan_amount",
+   "fieldtype": "Currency",
+   "label": "Total Loan Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_no_of_emi",
+   "fieldtype": "Int",
+   "label": "Total No of EMI",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loan_type",
+   "fieldtype": "Data",
+   "label": "Loan Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-19 12:24:34.736101",
+ "modified_by": "Administrator",
+ "module": "Loan Management",
+ "name": "Loan",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

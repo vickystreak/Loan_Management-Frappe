@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{borrower}-{DD}-{MM}-{YYYY}-{###}",
+ "creation": "2023-10-17 10:53:07.709191",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "borrower",
+  "principal_amount",
+  "loan_tenure",
+  "loan_type",
+  "application_date",
+  "column_break_jlbyd",
+  "interest_rate",
+  "monthly_emiexpected",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "principal_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Pricipal Amount",
+   "reqd": 1
+  },
+  {
+   "default": "12.5",
+   "fieldname": "interest_rate",
+   "fieldtype": "Float",
+   "label": "Interest Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loan_tenure",
+   "fieldtype": "Int",
+   "label": "Loan Tenure in years"
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Date of Application"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "Approved\nPending\nRejected"
+  },
+  {
+   "fieldname": "borrower",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Borrower",
+   "options": "Borrower",
+   "reqd": 1
+  },
+  {
+   "default": "Personal loan",
+   "fieldname": "loan_type",
+   "fieldtype": "Select",
+   "label": "Loan type",
+   "options": "Personal loan\nBusiness loan\nCar loan\nHouse Loan"
+  },
+  {
+   "fieldname": "column_break_jlbyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_emiexpected",
+   "fieldtype": "Currency",
+   "label": "Monthly EMI(Expected)",
+   "set_only_once": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-19 11:57:18.912031",
+ "modified_by": "Administrator",
+ "module": "Loan Management",
+ "name": "Loan Application",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
